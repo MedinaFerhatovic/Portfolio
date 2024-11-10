@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Prvi talas -->
+  <path d="M5 4C8 3 11 5 13 7L15 9C16 10 18 12 20 12C22 12 24 10 22 8L20 6C18 4 15 3 12 3H5Z" fill="#172B4D"/>
+  <!-- Drugi talas -->
+  <path d="M4 20C7 21 10 19 12 17L14 15C15 14 17 12 19 12C21 12 23 14 21 16L19 18C17 20 14 21 11 21H4Z" fill="#0052CC"/>
+</svg>
