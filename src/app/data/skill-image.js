@@ -1,74 +1,30 @@
 
-import angular from '../../../public/skills/angular.svg';
-import bootstrap from '../../../public/skills/bootstrap.svg';
-import c from '../../../public/skills/c.svg';
-import canva from '../../../public/skills/canva.svg';
-import cplusplus from '../../../public/skills/cplusplus.svg';
-import css from '../../../public/skills/css.svg';
-import git from '../../../public/skills/git.svg';
-import html from '../../../public/skills/html.svg';
-import javascript from '../../../public/skills/javascript.svg';
-import microsoftoffice from '../../../public/skills/microsoftoffice.svg';
-import mongoDB from '../../../public/skills/mongoDB.svg';
-import mysql from '../../../public/skills/mysql.svg';
-import nextJS from '../../../public/skills/nextJS.svg';
-import php from '../../../public/skills/php.svg';
-import react from '../../../public/skills/react.svg';
-import aspnet from '../../../public/skills/aspnet.svg';
-import nodejs from '../../../public/skills/nodejs.svg';
-import expressjs from '../../../public/skills/expressjs.svg';
-import jira from '../../../public/skills/jira.svg';
-import visualparadigm from '../../../public/skills/visualparadigm.svg';
-import confluence from '../../../public/skills/confluence.svg';
+export const skillsIcon = (skill) => {
+  const iconMap = {
+    "JavaScript": <i className="fab fa-js-square text-yellow-400 text-5xl"></i>,
+    "Express.js": <i className="fas fa-server text-green-600 text-5xl"></i>,
+    "Angular": <i className="fab fa-angular text-red-600 text-5xl"></i>,
+    "C++": <div className="text-blue-600 text-3xl font-bold border border-blue-600 rounded-full w-16 h-16 flex items-center justify-center">
+    C++
+   </div>,
+  
+    "ASP.NET": <i className="fas fa-window-restore text-purple-600 text-5xl"></i>,
+    "Python": <i className="fab fa-python text-blue-400 text-5xl"></i>,
+    "PHP": <i className="fab fa-php text-indigo-500 text-5xl"></i>,
+    "Node.js": <i className="fab fa-node-js text-green-500 text-5xl"></i>,
+    "HTML": <i className="fab fa-html5 text-orange-500 text-5xl"></i>,
+    "CSS": <i className="fab fa-css3-alt text-blue-500 text-5xl"></i>,
+    "MySQL": <i className="fas fa-database text-blue-700 text-5xl"></i>,
+    "MongoDB": <i className="fas fa-leaf text-green-600 text-5xl"></i>,
+    "React Native Expo": <i className="fab fa-react text-cyan-400 text-5xl"></i>,
+    "Next.js": <i className="fas fa-forward text-white text-5xl"></i>,
+    "Git": <i className="fab fa-git-alt text-orange-400 text-5xl"></i>,
+    "Jira": <i className="fab fa-jira text-blue-500 text-5xl"></i>,
+    "Confluence": <i className="fas fa-project-diagram text-blue-600 text-5xl"></i>,
+    "Visual Paradigm": <i className="fas fa-sitemap text-purple-400 text-5xl"></i>,
+    "Microsoft Office": <i className="fas fa-file-word text-red-500 text-5xl"></i>,
+    "Canva": <i className="fas fa-palette text-blue-300 text-5xl"></i>,
+  };
 
-export const skillsImage = (skill) => {
-  const skillID = skill.toLowerCase();
-  switch (skillID) {
-    case 'html':
-      return html;
-    case 'css':
-      return css;
-    case 'angular':
-      return angular;
-    case 'javascript':
-      return javascript;
-    case 'next.js':
-      return nextJS;
-    case 'react native expo':
-      return react;
-    case 'bootstrap':
-      return bootstrap;
-    case 'mongodb':
-      return mongoDB;
-    case 'mysql':
-      return mysql;
-    case 'c':
-      return c;
-    case 'c++':
-      return cplusplus;
-    case 'c#':
-      return csharp;
-    case 'php':
-      return php;
-    case 'git':
-      return git;
-    case 'canva':
-      return canva;
-    case 'microsoft office':
-      return microsoftoffice;
-    case 'asp.net':
-        return aspnet;
-    case 'node.js':
-        return nodejs;
-    case 'express.js':
-        return expressjs;
-    case 'jira':
-        return jira;
-    case 'visual paradigm':
-        return visualparadigm;
-    case 'confluence':
-        return confluence;
-    default:
-      break;
-  }
-}
+  return iconMap[skill] || <i className="fas fa-code text-gray-300 text-5xl"></i>;
+};

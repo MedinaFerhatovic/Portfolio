@@ -1,15 +1,18 @@
 'use client';
 
 import { skillsData } from "@/app/data/skills";
-import { skillsImage } from "@/app/data/skill-image";
-import Image from "next/image";
+import { skillsIcon } from "@/app/data/skill-image"; // Novu funkciju importujete ovde
+import { FaCode, FaToolbox } from 'react-icons/fa'; // Ikone za kategorije
+
+
 
 function Skills() {
   const programmingLanguages = skillsData.filter(skill => skill.category === 'Programming Language');
   const tools = skillsData.filter(skill => skill.category === 'Tool');
 
   return (
-    <div id="skills" className="my-16 lg:my-20 relative bg-gradient-to-br from-[#1c2a41] via-[#1e3a60] to-[#1c2a41] py-20 px-8 lg:px-16 rounded-2xl shadow-2xl text-gray-200">
+    <div id="skills" className="my-16 lg:my-20 relative bg-gradient-to-br from-[#3c546c] via-[#295077] to-[#223f5c] py-20 px-8 lg:px-16 rounded-3xl shadow-xl text-gray-200">
+      
       {/* Title Section */}
       <div className="hidden lg:flex flex-col items-center absolute top-10 -left-10 ml-5">
         <span className="bg-[#1a1443] w-fit text-white rotate-90 p-3 px-6 text-lg lg:text-xl rounded-md tracking-widest shadow-lg">
@@ -19,61 +22,66 @@ function Skills() {
       </div>
 
       {/* Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="space-y-16">
         
         {/* Programming Languages Section */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-white text-center">Programming Languages</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-12">
-            {programmingLanguages.map((skill, id) => {
-              const imageSrc = skillsImage(skill.name);
-              return (
-                <div
-                  className="bg-[#1a1d2f] p-4 rounded-lg border border-[#1f223c] shadow-md group transform hover:scale-105 hover:shadow-lg transition-all duration-300 min-w-[180px] flex flex-col items-center"
-                  key={id}
-                >
-                  <div className="h-24 w-24 rounded-full overflow-hidden bg-transparent shadow-md group-hover:scale-110 transition-all duration-200">
-                    <Image
-                      src={imageSrc}
-                      alt={skill.name}
-                      width={80}
-                      height={80}
-                      className="h-full w-auto rounded-full transition-all duration-200"
-                    />
-                  </div>
-                  <p className="text-white text-lg text-center mt-4">{skill.name}</p>
+          <h2 className="text-3xl font-bold text-white text-center flex items-center justify-center space-x-2">
+            <FaCode className="text-2xl" />
+            <span>Programming Languages</span>
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12">
+            {programmingLanguages.map((skill, id) => (
+              <div
+                className="bg-[#1a1d2f] p-6 rounded-lg border border-[#1f223c] shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center space-y-4 group"
+                key={id}
+              >
+                <div className="icon-container h-24 w-24 rounded-full overflow-hidden bg-transparent shadow-md group-hover:scale-110 transition-all duration-200 flex items-center justify-center">
+                {skillsIcon(skill.name)}
                 </div>
-              );
-            })}
+                <p className="text-white text-lg font-semibold text-center">{skill.name}</p>
+                <div className="w-full mt-3 relative">
+                  <div className="h-1 bg-[#1f223c] rounded-full">
+                    <div
+                      className="h-full bg-[#3498db] rounded-full transition-all duration-300"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Tools Section */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-semibold text-white text-center">Tools</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-12">
-            {tools.map((skill, id) => {
-              const imageSrc = skillsImage(skill.name);
-              return (
-                <div
-                  className="bg-[#1a1d2f] p-4 rounded-lg border border-[#1f223c] shadow-md group transform hover:scale-105 hover:shadow-lg transition-all duration-300 min-w-[180px] flex flex-col items-center"
-                  key={id}
-                >
-                  <div className="h-24 w-24 rounded-full overflow-hidden bg-transparent shadow-md group-hover:scale-110 transition-all duration-200">
-                    <Image
-                      src={imageSrc}
-                      alt={skill.name}
-                      width={80}
-                      height={80}
-                      className="h-full w-auto rounded-full transition-all duration-200"
-                    />
-                  </div>
-                  <p className="text-white text-lg text-center mt-4">{skill.name}</p>
+          <h2 className="text-3xl font-bold text-white text-center flex items-center justify-center space-x-2">
+            <FaToolbox className="text-2xl" />
+            <span>Tools</span>
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12">
+            {tools.map((skill, id) => (
+              <div
+                className="bg-[#1a1d2f] p-6 rounded-lg border border-[#1f223c] shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center space-y-4 group"
+                key={id}
+              >
+                <div className="icon-container h-24 w-24 rounded-full overflow-hidden bg-transparent shadow-md group-hover:scale-110 transition-all duration-200 flex items-center justify-center">
+                  {skillsIcon(skill.name)}
                 </div>
-              );
-            })}
+                <p className="text-white text-lg font-semibold text-center">{skill.name}</p>
+                <div className="w-full mt-3 relative">
+                  <div className="h-1 bg-[#1f223c] rounded-full">
+                    <div
+                      className="h-full bg-[#3498db] rounded-full transition-all duration-300"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </div>
   );

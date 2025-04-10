@@ -5,7 +5,7 @@ export const projectsData = [
         id: 1,
         name: 'Information System for Dental Clinics with Geolocation Search Capability (ISSO)',
         description: "ISSO is a project developed for my thesis, representing an advanced information system for managing dental clinics. ISSO enables patients to quickly locate nearby clinics through a mobile app with a single click, displaying the closest clinics based on their current location. Additionally, patients have access to features such as searching for clinics by name and address, finding available appointments by time and date, making reservations, and viewing dental records from all the clinics they have visited. The web applications for doctors and administrators allow efficient management of clinics, users, appointments, dental records and reservations.",
-        tools: ['MySQL', 'ASP.NET', 'Angular', 'React Native Expo'],
+        tools: ['MySQL', 'ASP.NET', 'Angular', 'React Native Expo', 'Jira', 'Git'],
         role: 'Full-Stack Developer',
         link: 'https://github.com/MedinaFerhatovic/Informacioni-sistem-stomatoloske-ordinacije',
         image: '/projects/isso.PNG',

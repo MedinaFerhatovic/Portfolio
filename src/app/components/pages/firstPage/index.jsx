@@ -37,12 +37,13 @@ function FirstPage() {
                 <RiContactsFill size={20} />
               </button>
             </Link>
-            <Link href={personalData.resume} target="_blank" className="bg-gradient-to-r from-indigo-400 to-teal-500 p-[2px] rounded-full">
+            <Link href="/Medina Ferhatović - CV.pdf" target="_blank" download className="bg-gradient-to-r from-indigo-400 to-teal-500 p-[2px] rounded-full">
               <button className="px-10 py-5 bg-[#1e2a34] rounded-full text-white uppercase font-semibold tracking-wider flex items-center gap-3 transition-all duration-300">
-                <span>Get Resume</span>
-                <MdDownload size={20} />
+                 <span>Get Resume</span>
+                 <MdDownload size={20} />
               </button>
             </Link>
+
           </div>
         </div>
 
@@ -52,16 +53,16 @@ function FirstPage() {
             <code className="font-mono text-sm leading-relaxed text-[#A1B4C1]">
               <div><span className="text-teal-400">const</span> myProfile = {'{'}</div>
               <div className="ml-8">
-                <span className="text-indigo-400">name</span>: <span className="text-teal-500">"{personalData.name}"</span>,
+                <span className="text-indigo-400">name</span>: <span className="text-teal-500">&quot;{personalData.name}&quot;</span>,
               </div>
               <div className="ml-8">
-                <span className="text-indigo-400">traits</span>: <span className="text-teal-500">["Responsible", "Ambitious", "Eager to Learn"]</span>,
+                <span className="text-indigo-400">traits</span>: <span className="text-teal-500">[&quot;Responsible&quot;, &quot;Ambitious&quot;, &quot;Eager to Learn&quot;]</span>,
               </div>
               <div className="ml-8">
-                <span className="text-indigo-400">approach</span>: <span className="text-teal-500">"Adaptable and solution-oriented, always ready to take on new challenges."</span>,
+                <span className="text-indigo-400">approach</span>: <span className="text-teal-500">&quot;Adaptable and solution-oriented, always ready to take on new challenges.&quot;</span>,
               </div>
               <div className="ml-8">
-                <span className="text-indigo-400">vision</span>: <span className="text-teal-500">"To grow professionally, continuously improve my skills, and contribute meaningfully to every project I take on"</span>,
+                <span className="text-indigo-400">vision</span>: <span className="text-teal-500">&quot;To grow professionally, continuously improve my skills, and contribute meaningfully to every project I take on.&quot;</span>,
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-teal-500">mission:</span>
@@ -69,9 +70,9 @@ function FirstPage() {
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div className="ml-12">
-                return this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">"Responsible"</span>) && 
-                this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">"Ambitious"</span>) &&
-                this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">"Eager to Learn"</span>);
+                return this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">&quot;Responsible&quot;</span>) && 
+                this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">&quot;Ambitious&quot;</span>) &&
+                this.<span className="text-indigo-400">traits</span>.includes(<span className="text-teal-500">&quot;Eager to Learn&quot;</span>);
               </div>
               <div className="ml-8">{'}'}</div>
               <div>{'}'}</div>
